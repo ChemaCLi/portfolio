@@ -2,8 +2,25 @@ import { TechnologyTimeline } from './components/TechnologyTimeline';
 import { ExperienceChart } from './components/ExperienceChart';
 import { GalagaGame } from './components/GalagaGame';
 import { projects, education, socialLinks, jobs } from './data/portfolio-data';
+import { useState } from 'react';
 
 export default function App() {
+  // this stores the jobs that have their detail expanded
+  const [openedJobs, setOpenedJobs] = useState<{ [key: string]: boolean }>({});
+
+  // If the job detail is opened, it will be closed, and vice versa
+  const toggleJobDetail = (jobId: string) => {
+    setOpenedJobs(prev => ({
+      ...prev,
+      [jobId]: !prev[jobId]
+    }));
+  };
+
+  // If the job detail is opened, it will be closed, and vice versa
+  const isJobDetailOpened = (jobId: string) => {
+    return openedJobs[jobId] || false;
+  };
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -131,11 +148,15 @@ export default function App() {
                   </span>
                 </div>
                 <div className="space-y-2 mb-4">
-                  {job.description.slice(0, 3).map((desc, index) => (
+                  {job.description.slice(0, isJobDetailOpened(job.id) ? job.description.length : 3).map((desc, index) => (
                     <p key={index} className="text-gray-300 text-sm">• {desc}</p>
                   ))}
                   {job.description.length > 3 && (
-                    <p className="text-gray-400 text-sm italic">... and more</p>
+                    <p className="text-gray-400 text-sm italic cursor-pointer" onClick={() => {
+                      toggleJobDetail(job.id);
+                    }}>
+                      {isJobDetailOpened(job.id) ? "(see less)" : "... and more"}
+                    </p>
                   )}
                 </div>
                 <div className="flex flex-wrap gap-2">
