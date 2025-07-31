@@ -1,6 +1,7 @@
 import { TechnologyTimeline } from './components/TechnologyTimeline';
 import { ExperienceChart } from './components/ExperienceChart';
 import { GalagaGame } from './components/GalagaGame';
+import { ShootingStars } from './components/ShootingStars';
 import { projects, education, socialLinks, jobs } from './data/portfolio-data';
 import { useState } from 'react';
 import { formatDateRange } from './utils/formatDateRange';
@@ -26,9 +27,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <header className="relative bg-gradient-to-br from-black via-gray-900 to-black border-b border-red-500/20">
+      <header className="relative bg-gradient-to-br from-black via-gray-900 to-black border-b border-red-500/20 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.1),transparent_70%)]"></div>
-        <div className="container mx-auto px-6 py-16 relative">
+        <ShootingStars />
+        <div className="container mx-auto px-6 py-16 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="relative inline-block">
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-red-400 to-yellow-400 bg-clip-text text-transparent">
