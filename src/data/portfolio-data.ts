@@ -59,7 +59,7 @@ export const jobs: Job[] = [
     position: "FullStack JS Developer",
     startDate: "2021-09",
     endDate: "2024-01",
-    technologies: ["JavaScript", "TypeScript", "React", "React Native", "NodeJS", "NextJS", "Tailwind", "Figma", "RabbitMQ", "PostgreSQL", "Bugsnag"],
+    technologies: ["JavaScript", "TypeScript", "React", "Flutter", "NodeJS", "REST", "NextJS", "NestJS", "Tailwind", "RabbitMQ", "PostgreSQL", "Azure"],
     description: [
       "Encouraged frontend best practices for mobile and web with ReactJS",
       "Implemented design system for mobile apps and web applications",
@@ -75,7 +75,7 @@ export const jobs: Job[] = [
     position: "Team Lead FullStack JS Developer",
     startDate: "2019-09",
     endDate: "2021-09",
-    technologies: ["JavaScript", "React", "NodeJS", "GraphQL", "REST", "AWS", "PostgreSQL", "Docker"],
+    technologies: ["JavaScript", "React", "NodeJS", "GraphQL", "REST", "AWS", "PostgreSQL", "Docker", "Digital Ocean", "Bugsnag", "Jest", "React Native", "Expo", "Prisma", "TypeORM", "Ant Design", "SASS", "Astro",  "Figma", "GiHub", "GitHub Actions", "Apollo"],
     description: [
       "Led React/NodeJS teams following good practices and DDD principles",
       "Encouraged SOLID and Hexagonal Architecture for long-term maintenance",
@@ -95,7 +95,7 @@ export const jobs: Job[] = [
     position: "Tech Leader",
     startDate: "2017-01",
     endDate: "2019-09",
-    technologies: ["JavaScript", "React", "React Native", "NodeJS", "PostgreSQL", "WebSockets", "NFC"],
+    technologies: ["JavaScript", "React", "React Native", "NodeJS", "WebSockets", "NFC", "PostgreSQL", "MySQL", "Java", "PHP", "JQuery", "GitLab"],
     description: [
       "Led and developed delivery tracking system with sockets support",
       "Built backend, frontend BackOffice and Hybrid Mobile App",
@@ -128,7 +128,29 @@ export const technologies: Technology[] = [
   { name: "WebSockets", color: "#010101", highlighted: false, months: [], icon: "Wifi" },
   { name: "NFC", color: "#002868", highlighted: false, months: [], icon: "Radio" },
   { name: "Datadog", color: "#632CA6", highlighted: false, months: [], icon: "BarChart3" },
-  { name: "Grafana", color: "#F46800", highlighted: false, months: [], icon: "LineChart" }
+  { name: "Grafana", color: "#F46800", highlighted: false, months: [], icon: "LineChart" },
+  { name: "MySQL", color: "#4479A1", highlighted: false, months: [], icon: "Database" },
+  { name: "Java", color: "#007396", highlighted: false, months: [], icon: "Code" },
+  { name: "PHP", color: "#777BB4", highlighted: false, months: [], icon: "Code" },
+  { name: "JQuery", color: "#0769AD", highlighted: false, months: [], icon: "Code" },
+  { name: "Digital Ocean", color: "#0080FF", highlighted: false, months: [], icon: "Cloud" },
+  { name: "Jest", color: "#C21325", highlighted: false, months: [], icon: "Test" },
+  { name: "React Native", color: "#61DAFB", highlighted: false, months: [], icon: "Smartphone" },
+  { name: "Expo", color: "#000020", highlighted: false, months: [], icon: "Code" },
+  { name: "Prisma", color: "#2D3748", highlighted: false, months: [], icon: "Layers" },
+  { name: "TypeORM", color: "#2D3748", highlighted: false, months: [], icon: "Layers" },
+  { name: "Ant Design", color: "#000000", highlighted: false, months: [], icon: "Code" },
+  { name: "SASS", color: "#CC6699", highlighted: false, months: [], icon: "Code" },
+  { name: "Astro", color: "#000000", highlighted: false, months: [], icon: "Code" },
+  { name: "GiHub", color: "#000000", highlighted: false, months: [], icon: "Code" },
+  { name: "GitHub Actions", color: "#000000", highlighted: false, months: [], icon: "Code" },
+  { name: "NestJS", color: "#000000", highlighted: false, months: [], icon: "Code" },
+  { name: "Flutter", color: "#000000", highlighted: false, months: [], icon: "Code" },
+  { name: "NestJS", color: "#000000", highlighted: false, months: [], icon: "Code" },
+  { name: "Azure", color: "#0078D4", highlighted: false, months: [], icon: "Code" },
+  { name: "GitLab", color: "#000000", highlighted: false, months: [], icon: "Code" },
+  { name: "GitLab CI/CD", color: "#000000", highlighted: false, months: [], icon: "Code" },
+  { name: "Apollo", color: "#311C87", highlighted: false, months: [], icon: "Rocket" },
 ];
 
 // Generate months for each technology based on job periods
@@ -163,7 +185,8 @@ export const projects: Project[] = [
   {
     name: "Advanced ToDo Dashboard",
     description: "A comprehensive task management tool with integrated Pomodoro timer for enhanced productivity tracking.",
-    technologies: ["React", "TypeScript", "Tailwind", "IndexedDB"]
+    technologies: ["React", "TypeScript", "Tailwind", "IndexedDB"],
+    url: "https://mi-taskboard.vercel.app/"
   },
   {
     name: "Devu Community Website",
@@ -197,11 +220,11 @@ export const education: Education[] = [
 ];
 
 export const socialLinks = {
-  devto: "https://dev.to/chemacl",
-  twitter: "https://twitter.com/chemacl",
+  devto: "https://dev.to/chema",
+  twitter: "https://twitter.com/ChemaCLi",
   linkedin: "https://www.linkedin.com/in/chema-cl/",
-  instagram: "https://instagram.com/chemacl",
-  github: "https://github.com/chemacl"
+  instagram: "https://instagram.com/chema.cli",
+  github: "https://github.com/ChemaCLi"
 };
 
 // Generate timeline months from 2017 to 2025
