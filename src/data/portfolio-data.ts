@@ -95,7 +95,7 @@ export const jobs: Job[] = [
     position: "Tech Leader",
     startDate: "2017-01",
     endDate: "2019-09",
-    technologies: ["JavaScript", "React", "React Native", "NodeJS", "WebSockets", "NFC", "PostgreSQL", "MySQL", "Java", "PHP", "JQuery", "GitLab"],
+    technologies: ["JavaScript", "React", "React Native", "NodeJS", "WebSockets", "NFC", "PostgreSQL", "MySQL", "Java", "PHP", "JQuery", "GitLab", "REST"],
     description: [
       "Led and developed delivery tracking system with sockets support",
       "Built backend, frontend BackOffice and Hybrid Mobile App",
@@ -149,7 +149,6 @@ export const technologies: Technology[] = [
   { name: "NestJS", color: "#000000", highlighted: false, months: [], icon: "Code" },
   { name: "Azure", color: "#0078D4", highlighted: false, months: [], icon: "Code" },
   { name: "GitLab", color: "#000000", highlighted: false, months: [], icon: "Code" },
-  { name: "GitLab CI/CD", color: "#000000", highlighted: false, months: [], icon: "Code" },
   { name: "Apollo", color: "#311C87", highlighted: false, months: [], icon: "Rocket" },
 ];
 

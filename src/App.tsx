@@ -38,7 +38,7 @@ export default function App() {
             <p className="text-red-400 text-lg">clz.chema@gmail.com</p>
             
             {/* Social Links */}
-            <div className="flex justify-center space-x-6 pt-4">
+            <div className="flex justify-center space-x-6 pt-4 flex-wrap gap-2">
               {Object.entries({
                 'Dev.to': socialLinks.devto,
                 'Twitter': socialLinks.twitter,
@@ -69,16 +69,19 @@ export default function App() {
             <div className="space-y-4">
               <h3 className="text-lg font-medium text-yellow-400">Professional</h3>
               <p className="text-gray-300 leading-relaxed">
-                I'm a passionate JavaScript developer who loves working across the full stack - from backend services to frontend web applications and mobile development. I'm deeply committed to fostering team collaboration and building strong professional relationships.
+                👨‍💻 I'm a passionate JavaScript developer who loves working across the full stack - from backend services to frontend web applications and mobile development. I'm deeply committed to fostering team collaboration and building strong professional relationships.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                I enjoy programming as a hobby, staying current with tech blogs and newsletters, writing posts on dev.to, and actively participating in technology events. I'm particularly proud to be the co-founder of <a href="https://devu.community" className="text-purple-400 hover:text-purple-300 underline" target="_blank" rel="noopener noreferrer">Devu Community</a>, our local tech community.
+                💻 I enjoy programming as a hobby, staying current with tech blogs and newsletters, writing posts on dev.to, and actively participating in technology events. I'm particularly proud to be the co-founder of <a href="https://devu.community" className="text-purple-400 hover:text-purple-300 underline" target="_blank" rel="noopener noreferrer">Devu Community</a>, our local tech community.
               </p>
             </div>
             <div className="space-y-4">
               <h3 className="text-lg font-medium text-yellow-400">Personal</h3>
               <p className="text-gray-300 leading-relaxed">
-                Beyond coding, I'm passionate about digital and traditional illustrations, reading, and writing fiction. I love listening to music and playing my favorite songs. I also enjoy repairing old electronics devices - there's something deeply satisfying about bringing old technology back to life.
+                🎨 Beyond coding, I'm passionate about digital and traditional illustrations, reading, and writing fiction. I love listening to music and playing my favorite songs. I also enjoy repairing old electronics devices - there's something deeply satisfying about bringing old technology back to life.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                🍳 I also enjoy cooking and taking care of special people in my life.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 I'm naturally curious and creative, always eager to learn new things and explore different perspectives.
