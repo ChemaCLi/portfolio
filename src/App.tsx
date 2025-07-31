@@ -211,13 +211,33 @@ export default function App() {
           <GalagaGame />
         </section>
 
+        <section className="mb-16">
+        <div className="flex flex-col items-center justify-center py-12">
+          <div className="bg-gray-900 border border-gray-700 rounded-lg px-8 py-6 shadow-lg flex flex-col items-center">
+            <span className="text-3xl mb-2">🛸</span>
+            <h3 className="text-xl font-bold text-white mb-2 text-center">
+              You're far from home. Wanna a ride?
+            </h3>
+            <button
+              className="mt-4 px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-full font-semibold transition-colors shadow"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+              Take me to the top
+            </button>
+          </div>
+        </div>
+        </section>
+
         {/* Footer */}
         <footer className="text-center py-8 border-t border-gray-700">
           <p className="text-gray-400">
-            Built with passion for technology and community.
+            Built with love.js 💖 and JaibaScript 🦀.
           </p>
-          <p className="text-gray-500 text-sm mt-2">
-            🎮 Thanks for visiting!
+          <p className="text-gray-400 text-sm mt-2">
+            All rights reserved 2025 - {new Date().getFullYear()} © José María Chico López.
+          </p>
+          <p className="text-gray-400 text-sm mt-2">
+            Thanks for visiting!
           </p>
         </footer>
       </div>
