@@ -6,12 +6,19 @@ import { JobModal } from './JobModal';
 export const ExperienceChart: React.FC = () => {
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   // Calculate experience in months for each technology
   const techExperience = technologies.map(tech => ({
     ...tech,
     months: tech.months.length
-  })).sort((a, b) => b.months - a.months);
+  }))
+  .sort((a, b) => b.months - a.months)
+  .slice(0, isExpanded ? undefined : 10);
 
   const maxMonths = techExperience[0]?.months || 0;
 
@@ -96,6 +103,9 @@ export const ExperienceChart: React.FC = () => {
             </div>
           </div>
         ))}
+        <span className="flex gap-4 text-gray-400 text-md font-mono text-center cursor-pointer" onClick={toggleExpanded}>
+          {isExpanded ? '(Show less)' : `(Show ${technologies.length - 10} more)`}
+        </span>
       </div>
 
       {/* Job Details Modal */}

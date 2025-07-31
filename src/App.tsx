@@ -195,14 +195,15 @@ export default function App() {
           </div>
         </section>
 
+        {/* Experience Chart */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-red-400 mb-6 border-b border-red-500/30 pb-2">Experience</h2>
+          <ExperienceChart />
+        </section>
+
         {/* Technology Timeline */}
         <section className="mb-16">
           <TechnologyTimeline />
-        </section>
-
-        {/* Experience Chart */}
-        <section className="mb-16">
-          <ExperienceChart />
         </section>
 
         {/* Galaga Game Section */}
