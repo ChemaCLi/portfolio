@@ -139,16 +139,15 @@ export default function App() {
                   )}
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {job.technologies.slice(0, 8).map(tech => (
-                    <span key={tech} className="px-2 py-1 bg-red-900/30 text-red-300 rounded text-sm">
+                  {job.technologies.map(tech => (
+                    <span 
+                    key={tech} 
+                    className={`px-3 py-1 rounded-full text-sm border text-gray-400 border-slate-800`}
+                  >
                       {tech}
                     </span>
                   ))}
-                  {job.technologies.length > 8 && (
-                    <span className="px-2 py-1 bg-gray-700 text-gray-400 rounded text-sm">
-                      +{job.technologies.length - 8} more
-                    </span>
-                  )}
+                  
                 </div>
               </div>
             ))}

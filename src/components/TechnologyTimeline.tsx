@@ -81,7 +81,7 @@ export const TechnologyTimeline: React.FC = () => {
                   !tech.highlighted ? 'opacity-60' : ''
                 }`}
               >
-                <td className="sticky left-0 bg-gray-900 p-2 border-r border-gray-700">
+                <td className="sticky left-0 bg-gray-900 p-2 border-r border-gray-700" style={{ backgroundColor: '#000', zIndex: 1 }}>
                   <button
                     onClick={() => handleTechClick(tech.name)}
                     className="flex items-center space-x-2 w-full text-left hover:bg-gray-800 rounded p-1 transition-colors cursor-pointer"
