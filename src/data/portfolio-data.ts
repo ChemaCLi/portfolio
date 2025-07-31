@@ -36,7 +36,7 @@ export const jobs: Job[] = [
     position: "Backend Engineer",
     startDate: "2024-01",
     endDate: "2025-07",
-    technologies: ["JavaScript", "TypeScript", "Bun", "Prisma", "React", "Tailwind", "Apollo", "Axios", "GraphQL", "REST", "AWS", "Docker", "PostgreSQL", "Datadog", "Grafana"],
+    technologies: ["JavaScript", "TypeScript", "Bun", "Prisma", "React", "Tailwind", "Apollo", "Axios", "GraphQL", "REST", "AWS", "Docker", "PostgreSQL", "Datadog", "Grafana", "GitHub", "GitHub Actions"],
     description: [
       "Generated reports from platform DBs to help customers understand data and money flow",
       "Implemented sales campaign metrics tools",
