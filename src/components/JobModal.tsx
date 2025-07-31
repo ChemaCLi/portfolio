@@ -1,6 +1,8 @@
 import React from 'react';
 import { X } from 'lucide-react';
 import { Job } from '../data/portfolio-data';
+import { formatDateRange } from '../utils/formatDateRange';
+import { calculateDuration } from '../utils/calculateDuration';
 
 interface JobModalProps {
   isOpen: boolean;
@@ -11,35 +13,6 @@ interface JobModalProps {
 
 export const JobModal: React.FC<JobModalProps> = ({ isOpen, onClose, jobs, technology }) => {
   if (!isOpen) return null;
-
-  const formatDateRange = (startDate: string, endDate: string) => {
-    const start = new Date(startDate + "-01").toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'short' 
-    });
-    const end = endDate === "2025-07" ? "Present" : new Date(endDate + "-01").toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'short' 
-    });
-    return `${start} - ${end}`;
-  };
-
-  const calculateDuration = (startDate: string, endDate: string) => {
-    const start = new Date(startDate + "-01");
-    const end = endDate === "2025-07" ? new Date() : new Date(endDate + "-01");
-    const months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
-    
-    const years = Math.floor(months / 12);
-    const remainingMonths = months % 12;
-    
-    if (years > 0 && remainingMonths > 0) {
-      return `${years}y ${remainingMonths}m`;
-    } else if (years > 0) {
-      return `${years}y`;
-    } else {
-      return `${remainingMonths}m`;
-    }
-  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -95,7 +68,7 @@ export const JobModal: React.FC<JobModalProps> = ({ isOpen, onClose, jobs, techn
                 
                 {/* Technologies */}
                 <div>
-                  <h4 className="text-purple-400 font-medium mb-2">Technologies Used:</h4>
+                  <h4 className="text-purple-400 font-medium mb-2">Technologies & Tools:</h4>
                   <div className="flex flex-wrap gap-2">
                     {job.technologies.map(tech => (
                       <span 

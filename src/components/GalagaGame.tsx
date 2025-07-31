@@ -471,7 +471,7 @@ export const GalagaGame: React.FC = () => {
           🎮 Galaga Mini-Game
         </h2>
         <p className="text-gray-400">
-          A classic space shooter as a fun bonus! Use your mouse to move and click to shoot.
+          Hey! Thank you for visiting my portfolio. As a gift for you, have fun playing this little game!
         </p>
       </div>
 
@@ -515,12 +515,12 @@ export const GalagaGame: React.FC = () => {
             {gameStatus === 'menu' && (
               <div className="absolute inset-0 bg-black/80 flex items-center justify-center rounded">
                 <div className="text-center space-y-4">
-                  <h3 className="text-2xl font-bold text-white">Galaga Clone</h3>
+                  <h3 className="text-2xl font-bold text-white">Galadev</h3>
                   <p className="text-gray-300">Defeat all enemies to win!</p>
-                  <p className="text-gray-400 text-sm">Move: Mouse | Shoot: Left Click</p>
+                  <p className="text-gray-400 text-sm">Move: Mouse/Touch to auto-pilot | Shoot: Click/Touch</p>
                   <button
                     onClick={startGame}
-                    className="flex items-center space-x-2 px-6 py-3 bg-red-600 hover:bg-red-700 rounded-lg transition-colors mx-auto"
+                    className="flex items-center space-x-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors mx-auto"
                   >
                     <Play className="w-5 h-5" />
                     <span>Start Game</span>
@@ -585,8 +585,8 @@ export const GalagaGame: React.FC = () => {
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div className="space-y-1">
                 <p className="text-purple-400 font-medium">Controls:</p>
-                <p className="text-gray-400">Mouse: Move ship</p>
-                <p className="text-gray-400">Left Click: Shoot</p>
+                <p className="text-gray-400">Mouse/Touch: Move ship</p>
+                <p className="text-gray-400">Click/Touch: Shoot</p>
               </div>
               <div className="space-y-1">
                 <p className="text-purple-400 font-medium">Scoring:</p>

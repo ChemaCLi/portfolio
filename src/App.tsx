@@ -3,6 +3,8 @@ import { ExperienceChart } from './components/ExperienceChart';
 import { GalagaGame } from './components/GalagaGame';
 import { projects, education, socialLinks, jobs } from './data/portfolio-data';
 import { useState } from 'react';
+import { formatDateRange } from './utils/formatDateRange';
+import { calculateDuration } from './utils/calculateDuration';
 
 export default function App() {
   // this stores the jobs that have their detail expanded
@@ -146,9 +148,10 @@ export default function App() {
                     <h3 className="text-lg font-medium text-white">{job.position}</h3>
                     <p className="text-yellow-400">{job.company}</p>
                   </div>
-                  <span className="text-gray-400 text-sm">
-                    {job.startDate} - {job.endDate === "2025-07" ? "Present" : job.endDate}
-                  </span>
+                  <div className="text-right">
+                    <p className="text-gray-300 text-sm">{formatDateRange(job.startDate, job.endDate)}</p>
+                    <p className="text-gray-400 text-xs">Duration: {calculateDuration(job.startDate, job.endDate)}</p>
+                  </div>
                 </div>
                 <div className="space-y-2 mb-4">
                   {job.description.slice(0, isJobDetailOpened(job.id) ? job.description.length : 3).map((desc, index) => (
@@ -210,13 +213,10 @@ export default function App() {
         {/* Footer */}
         <footer className="text-center py-8 border-t border-gray-700">
           <p className="text-gray-400">
-            Built with passion for technology and community. Co-founder of{' '}
-            <a href="https://devu.community" className="text-purple-400 hover:text-purple-300 underline" target="_blank" rel="noopener noreferrer">
-              Devu Community
-            </a>
+            Built with passion for technology and community.
           </p>
           <p className="text-gray-500 text-sm mt-2">
-            🎮 Thanks for playing! This Galaga game was made with pure JavaScript and HTML5 Canvas.
+            🎮 Thanks for visiting!
           </p>
         </footer>
       </div>
